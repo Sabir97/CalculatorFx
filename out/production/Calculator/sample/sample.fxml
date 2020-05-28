@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="MainPanel" style="-fx-background-color: Grey;">
+         <children>
+            <TextArea fx:id="ResultArea" layoutX="62.0" layoutY="62.0" prefHeight="68.0" prefWidth="562.0">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="Btn7" layoutX="94.0" layoutY="197.0" mnemonicParsing="false" onAction="#seven" prefHeight="68.0" prefWidth="83.0" text="7" />
+            <Button fx:id="Btn8" layoutX="177.0" layoutY="197.0" mnemonicParsing="false" onAction="#eight" prefHeight="68.0" prefWidth="83.0" text="8" />
+            <Button fx:id="Btn9" layoutX="260.0" layoutY="197.0" mnemonicParsing="false" onAction="#nine" prefHeight="68.0" prefWidth="83.0" text="9" />
+            <Button fx:id="Btn4" layoutX="94.0" layoutY="265.0" mnemonicParsing="false" onAction="#four" prefHeight="68.0" prefWidth="83.0" text="4" />
+            <Button fx:id="Btn5" layoutX="177.0" layoutY="265.0" mnemonicParsing="false" onAction="#five" prefHeight="68.0" prefWidth="83.0" text="5" />
+            <Button fx:id="Btn6" layoutX="260.0" layoutY="265.0" mnemonicParsing="false" onAction="#six" prefHeight="68.0" prefWidth="83.0" text="6" />
+            <Button fx:id="Btn1" layoutX="94.0" layoutY="333.0" mnemonicParsing="false" onAction="#one" prefHeight="68.0" prefWidth="83.0" text="1" />
+            <Button fx:id="Btn2" layoutX="177.0" layoutY="333.0" mnemonicParsing="false" onAction="#two" prefHeight="68.0" prefWidth="83.0" text="2" />
+            <Button fx:id="Btn3" layoutX="260.0" layoutY="333.0" mnemonicParsing="false" onAction="#three" prefHeight="68.0" prefWidth="83.0" text="3" />
+            <Button fx:id="Btn0" layoutX="178.0" layoutY="401.0" mnemonicParsing="false" onAction="#zero" prefHeight="68.0" prefWidth="83.0" text="0" />
+            <Button fx:id="BtnPlus" layoutX="416.0" layoutY="197.0" mnemonicParsing="false" onAction="#plus" prefHeight="68.0" prefWidth="65.0" text="+" />
+            <Button fx:id="BtnMinus" layoutX="416.0" layoutY="265.0" mnemonicParsing="false" onAction="#minus" prefHeight="68.0" prefWidth="65.0" text="-" />
+            <Button fx:id="BtnMult" layoutX="416.0" layoutY="333.0" mnemonicParsing="false" onAction="#mult" prefHeight="68.0" prefWidth="65.0" text="*" />
+            <Button fx:id="BtnDev" layoutX="416.0" layoutY="401.0" mnemonicParsing="false" onAction="#dev" prefHeight="68.0" prefWidth="65.0" text="/" />
+            <Button fx:id="BtnEqual" layoutX="260.0" layoutY="401.0" mnemonicParsing="false" onAction="#equal" prefHeight="68.0" prefWidth="83.0" text="=" />
+            <Label layoutX="268.0" layoutY="14.0" text="Calculator Fx">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Label>
+            <Label layoutX="489.0" layoutY="475.0" text="By Sabir Mohammedi Taieb" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
