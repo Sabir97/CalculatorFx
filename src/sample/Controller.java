@@ -8,10 +8,10 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 
 public class Controller {
-    int number;
+    double number;
     String operator;
-    int r = 0;
-    int p = 0;
+    double r = 0;
+    double p = 0;
 
     @FXML
     private Pane MainPanel;
@@ -107,32 +107,44 @@ public class Controller {
     }
     @FXML
     public void equal()throws IOException {
-        if(operator == "+"){
-            r = p + Integer.parseInt(ResultArea.getText());
-        }
+        number = Double.parseDouble(ResultArea.getText());
+        if(operator.equals("+")){
+            r = p + number;
+        }else
+            if (operator.equals("-")){
+                r = p - number;
+            }else if (operator.equals("*")){
+                r = p*number;
+            }else if (operator.equals("/")){
+                r = p / number;
+            }
         String res = "" + r;
         ResultArea.setText(res);
     }
 
     @FXML
     public void plus()throws IOException {
-        p = Integer.parseInt(ResultArea.getText());
+        p = Double.parseDouble(ResultArea.getText());
         operator = "+";
         ResultArea.setText("");
     }
     @FXML
     public void minus()throws IOException {
-        number = 0;
-        ResultArea.setText(ResultArea.getText()+"-");
+        p = Double.parseDouble(ResultArea.getText());
+        operator = "-";
+        ResultArea.setText("");
     }
     @FXML
     public void mult()throws IOException {
-        number = 0;
-        ResultArea.setText(ResultArea.getText()+"*");
+        p = Double.parseDouble(ResultArea.getText());
+        operator = "*";
+        ResultArea.setText("");
     }
     @FXML
     public void dev()throws IOException {
-        ResultArea.setText(ResultArea.getText()+"/");
+        p = Double.parseDouble(ResultArea.getText());
+        operator = "/";
+        ResultArea.setText("");
     }
     @FXML
     public void zero()throws IOException {
